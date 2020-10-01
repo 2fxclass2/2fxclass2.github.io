@@ -41,7 +41,10 @@
 					alert ("对不起，不支持您的客户端登录，因为没有LocalStorage支持。");	
 				}
 			}
+			document.getElementById("username").innerHTML = localStorage.username;
+			document.getElementById("stuid").innerHTML = localStorage.stuid;
 		</script>
+		
 	<hr>
 </body>
 </html>
