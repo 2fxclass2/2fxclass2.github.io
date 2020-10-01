@@ -1,1 +1,32 @@
-Site Building
+<!doctype html>
+<html>
+	<head>
+    	<title>主页-复旦二附校2024届2班</title>
+        <link rel="shortcut icon" href="https://2fxclass2.github.io/classlogo.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+<p id="demo">点击按钮获取您当前经纬坐标：</p>
+<button onclick="getLocation()">查询</button>
+<script>
+var x=document.getElementById("demo");
+function getLocation()
+{
+	if (navigator.geolocation)
+	{
+		navigator.geolocation.getCurrentPosition(showPosition);
+	}
+	else
+	{
+		x.innerHTML="该浏览器不支持获取地理位置。";
+	}
+}
+
+function showPosition(position)
+{
+	x.innerHTML="纬度: " + position.coords.latitude + 
+	"<br>经度: " + position.coords.longitude;	
+}
+</script>
+</body>
+</html>
