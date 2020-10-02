@@ -134,8 +134,13 @@ else
 setCookie("counter", visits, now)
 document.write("<center>到访人数<b style='color:gray'>"+visits+"</b>人次&nbsp;&nbsp;谢谢您的光临</center>")
 </script>
-<a href="javascript:void(0);" onclick="window.open('window-child.html','Ratting',width=550,height=170,left=150,top=200,toolbar=0,status=0');">
-	<center><b style="color:gray">我的IP地址</b></center>
-		</a>
+<script type="text/javascript">
+// Popup window code
+function newPopup(url) {
+	popupWindow = window.open(
+		url,'popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=no,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+}
+</script>
+	    <p><a href="JavaScript:newPopup('https://ipapi.co/json/');"><center><b style="color:gray">我的IP地址</b></a></p>
 </body>
 </html>
