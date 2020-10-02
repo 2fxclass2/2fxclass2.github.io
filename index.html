@@ -28,6 +28,7 @@
 	<hr>
 		用户名：<b><span id="username"></span></b>
 		学号：<b><span id="stuid"></span></b>
+	    <button onclick="logout()">登出</button>
 		<script>
 			function login(){
 				if(typeof(Storage)!=="undefined"){
@@ -40,6 +41,10 @@
 				else{
 					alert ("对不起，不支持您的客户端登录，因为没有LocalStorage支持。");	
 				}
+			}
+			function logout(){
+				localStorage.removeItem("username");
+				localStorage.removeItem("stuid");
 			}
 			document.getElementById("username").innerHTML = localStorage.username;
 			document.getElementById("stuid").innerHTML = localStorage.stuid;
