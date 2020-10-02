@@ -53,6 +53,7 @@
   <a href="javascript:void(0);" onclick="score()">查询成绩</a>&nbsp;&nbsp;
   <a href="javascript:void(0);" onclick="weather()">今日天气</a>&nbsp;&nbsp;
   <a href="javascript:void(0);" onclick="eclassroom()">学习中心</a>&nbsp;&nbsp;
+  <a href="javascript:void(0);" onclick="admin()">管理员中心</a>&nbsp;&nbsp;
   <hr>
   <span id="iframe"></span>
   <script>
@@ -64,5 +65,8 @@
     }
 function eclassroom(){
 	document.getElementById("iframe").innerHTML="<iframe src='https://eclassroom.github.io' width=1200 height=420 frameborder='0' scrolling='no' allowtransparency='true'></iframe>";
+}
+	  function admin(){
+	document.getElementById("iframe").innerHTML="<iframe src='https://eclassroom.github.io/cgi-bin/admin/login/' width=1200 height=420 frameborder='0' scrolling='no' allowtransparency='true'></iframe>";
 }
   </script>
