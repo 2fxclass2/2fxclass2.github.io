@@ -7,6 +7,9 @@
 				popupWindow = window.open(
 		url,'popUpWindow','height=600,width=800,left=10,top=10,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no,status=yes')
 }
+			function closeWindow() {
+                        window.top.close();
+                    }
 		</script>
 	</head>
 	<body>
