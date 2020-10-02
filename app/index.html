@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+    	<title>课代表-复旦二附校2024届2班</title>
+        <link rel="shortcut icon" href="https://2fxclass2.github.io/classlogo.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+	<img src="https://2fxclass2.github.io/classlogo.jpg" width=50 height=50/>复旦大学第二附属学校2024届2班<br>
+	<a href="javascript:void(0);" onclick="window.location.href='https://2fxclass2.github.io'">
+    首页
+    </a>&nbsp;&nbsp;
+    <a href="javascript:void(0);" onclick="window.location.pathname='/teachers'">
+    师资
+    </a>&nbsp;&nbsp;
+    <a href="javascript:void(0);" onclick="window.location.pathname='/committee'">
+    班委
+    </a>&nbsp;&nbsp;
+    <a href="javascript:void(0);" onclick="window.location.pathname='/representative'">
+    课代表
+    </a>&nbsp;&nbsp;
+    <a href="javascript:void(0);" onclick="window.location.href='https://eclassroom.github.io'">
+    学习中心
+    </a>&nbsp;&nbsp;
+    <a href="javascript:void(0);" onclick="login()">
+		<button>登录</button>
+    </a>
+	<hr>
+		用户名：<b><span id="username"></span></b>
+		学号：<b><span id="stuid"></span></b>
+	    <button onclick="logout()">登出</button>
+		<script>
+			function login(){
+				if(typeof(Storage)!=="undefined"){
+					alert ("请您注意，登录只做登记流程使用，和学习中心账号不同。");
+				localStorage.username=prompt("请输入您的用户名：");
+				localStorage.stuid=prompt("请输入您的学号：");
+				document.getElementById("username").innerHTML = localStorage.username;
+			document.getElementById("stuid").innerHTML = localStorage.stuid;
+				}
+				else{
+					alert ("对不起，不支持您的客户端登录，因为没有LocalStorage支持。");	
+				}
+			}
+			function logout(){
+				localStorage.removeItem("username");
+				localStorage.removeItem("stuid");
+			}
+			document.getElementById("username").innerHTML = localStorage.username;
+			document.getElementById("stuid").innerHTML = localStorage.stuid;
+		</script>	
+	<hr>
+  <a href="javascript:void(0);" onclick="score()">查询成绩</a>&nbsp;&nbsp;
+  <hr>
+  <span id="iframe"></span>
+  <script>
+    function score(){
+      document.getElementById("iframe").innerHTML="<iframe src='https://2fxclass2.github.io/app/score/'></iframe>";
+    }
+  </script>
