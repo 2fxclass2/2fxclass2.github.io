@@ -1,1 +1,24 @@
-
+<!doctype html>
+<html>
+	<head>
+		<title>成绩查询</title>
+		<script>
+			function newPopup(url) {
+				popupWindow = window.open(
+		url,'popUpWindow','height=600,width=800,left=10,top=10,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no,status=yes')
+}
+		</script>
+	</head>
+	<body>
+		<b>复旦二附校2024届2班成绩查询系统</b><br>
+		我们已检测到您的学号是<b><span id="stuid"></span></b>，您可以在成绩单中使用Ctrl+F找到自己的成绩。<br>
+		<script>
+			document.getElementById("username").innerHTML = localStorage.username;
+			document.getElementById("stuid").innerHTML = localStorage.stuid;
+		</script>
+		可查询的：<br>
+		<a href="javascript:void(0);" onclick="newPopup('https://2fxclass2.github.io/app/score/math/2020/09/02/')">
+			2020年9月第二次数学单元测验
+		</a>
+	</body>
+</html>
